@@ -1,7 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { Observable } from '../../../node_modules/rxjs/dist/types';
-import { map } from '../../../node_modules/rxjs/dist/types/operators';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { FilterParams } from '../interfaces/filter-params';
 import { ProductsResponse } from '../interfaces/products-response';
 import { Product } from '../interfaces/product';

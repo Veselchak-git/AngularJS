@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy, inject, OnInit, OnDestroy, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Subject, debounceTime, switchMap, tap, of, catchError, Subscription } from '../../../../node_modules/rxjs/dist/types';
+import { Subject, debounceTime, switchMap, tap, of, catchError, Subscription } from 'rxjs';
 import { SORT_OPTIONS } from '../../const/sort-options';
 import { ProductService } from '../../services/product.service';
 import { FilterParams } from '../../interfaces/filter-params';
