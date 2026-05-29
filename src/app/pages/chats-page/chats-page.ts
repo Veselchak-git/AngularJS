@@ -1,4 +1,4 @@
-import { ChatSearchService } from './../../data/services/chat-search-service';
+import { ChatSearchService } from '../../data/services/chat-search-service';
 import { Component, inject, Input, signal } from '@angular/core';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BehaviorSubject, debounceTime, distinctUntilChanged, filter, map, Observable, of, startWith, switchMap } from 'rxjs';

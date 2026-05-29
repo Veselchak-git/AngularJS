@@ -1,4 +1,4 @@
-import { Profile } from './../../data/interfaces/profile.interface';
+import { Profile } from '../../data/interfaces/profile.interface';
 import { Component, input } from '@angular/core';
 import { ImgUrlPipe } from "../../helpers/pipes/img-url-pipe";
 
