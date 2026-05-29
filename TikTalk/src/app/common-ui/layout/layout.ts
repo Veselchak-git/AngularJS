@@ -1,4 +1,4 @@
-import { ProfileService } from '../../data/services/profile';
+import { ProfileService } from './../../data/services/profile';
 import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { AppSideBar } from '../app-side-bar/app-side-bar';

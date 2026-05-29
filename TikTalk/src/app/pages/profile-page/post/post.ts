@@ -1,5 +1,5 @@
 import { firstValueFrom, switchMap, tap } from 'rxjs';
-import { Post as PostModel} from '../../../data/interfaces/post.interface';
+import { Post as PostModel} from './../../../data/interfaces/post.interface';
 import { ChangeDetectorRef, Component, EventEmitter, inject, Input, Output} from '@angular/core';
 import { PostService } from '../../../data/services/post-service';
 import { AsyncPipe, DatePipe } from '@angular/common';

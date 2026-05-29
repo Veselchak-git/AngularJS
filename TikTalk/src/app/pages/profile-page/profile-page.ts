@@ -1,4 +1,4 @@
-import { ProfileService } from '../../data/services/profile';
+import { ProfileService } from './../../data/services/profile';
 import { Component, inject, Pipe } from '@angular/core';
 import { ProfileHeader } from "../../common-ui/profile-header/profile-header";
 import { ActivatedRoute, RouterLink } from '@angular/router';

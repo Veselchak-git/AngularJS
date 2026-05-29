@@ -1,5 +1,5 @@
-import { ProfileService } from '../../data/services/profile';
-import { Profile } from '../../data/interfaces/profile.interface';
+import { ProfileService } from './../../data/services/profile';
+import { Profile } from './../../data/interfaces/profile.interface';
 import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { ImgUrlPipe } from '../../helpers/pipes/img-url-pipe';
 import { SvgIcon } from "../svg-icon/svg-icon";

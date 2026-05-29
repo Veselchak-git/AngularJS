@@ -1,4 +1,4 @@
-import { ProfileService } from '../../data/services/profile';
+import { ProfileService } from './../../data/services/profile';
 import { Component, inject, signal } from '@angular/core';
 import { SvgIcon } from "../svg-icon/svg-icon";
 import { SubscriberCard } from "../sidebar/subscriber-card/subscriber-card";

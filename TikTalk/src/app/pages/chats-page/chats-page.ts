@@ -1,7 +1,7 @@
-import { ChatSearchService } from '../../data/services/chat-search-service';
+import { ChatSearchService } from './../../data/services/chat-search-service';
 import { Component, inject, Input, signal } from '@angular/core';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BehaviorSubject, debounceTime, distinctUntilChanged, filter, map, Observable, of, startWith, switchMap } from 'rxjs';
+import { BehaviorSubject, debounceTime, distinctUntilChanged, filter, map, Observable, startWith, switchMap } from 'rxjs';
 import { ChatInterface } from '../../data/interfaces/chat.interface';
 import { AsyncPipe, DatePipe, SlicePipe } from '@angular/common';
 import { Chat } from '../../data/services/chat-service';
@@ -10,7 +10,7 @@ import { getChat } from '../../data/interfaces/get-chat.interface';
 import { SvgIcon } from "../../common-ui/svg-icon/svg-icon";
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { ProfileService } from '../../data/services/profile';
-import { toObservable, takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { toObservable } from '@angular/core/rxjs-interop';
 import { PickerComponent } from "@ctrl/ngx-emoji-mart";
 import { ChatMessageInterface } from '../../data/interfaces/chat-message.interface';
 
@@ -46,14 +46,6 @@ export class ChatsPage {
         // На десктопе показываем оба блока
         this.showChatList.set(true);
       }
-    });
-
-    this.route.paramMap.pipe(
-      map(params => params.get('id')),
-      switchMap(id => id ? this.chatService.getPersonalChat(+id) : of(null)),
-      takeUntilDestroyed()
-    ).subscribe(chat => {
-      this.openedChatSubject.next(chat);
     });
   }
 
@@ -97,6 +89,10 @@ export class ChatsPage {
       this.showChatList.set(false);
     }
     this.router.navigate(['/chats', chatId]);
+    this.chatService.getPersonalChat(chatId).subscribe(chat => {
+        this.openedChatSubject.next(chat);
+
+    })
   }
 
   closeChat() {

@@ -1,4 +1,4 @@
-import { PostService } from '../../../data/services/post-service';
+import { PostService } from './../../../data/services/post-service';
 import { Component, inject, input} from '@angular/core';
 import { ImgUrlPipe } from "../../../helpers/pipes/img-url-pipe";
 import { Profile } from '../../../data/interfaces/profile.interface';
